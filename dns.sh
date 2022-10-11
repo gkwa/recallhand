@@ -17,6 +17,7 @@ apt-get update --yes --quiet
 apt-get install --yes --quiet lxd
 
 lxd init --auto
+lxc network delete lxdbr0
 lxc network create lxdbr0 \
   ipv4.address=auto \
   ipv4.nat=true \

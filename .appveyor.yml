@@ -12,7 +12,6 @@ on_failure:
 # - sleep 60m
 
 install:
-- echo nameserver 8.8.8.8 | sudo tee -a /etc/resolv.conf
 - sudo apt-get -qq update
 - sudo snap install core
 - sudo apt-get -y install apparmor apparmor-utils auditd apparmor-profiles apparmor-profiles-extra lxc debootstrap squashfs-tools awscli >/dev/null
@@ -20,5 +19,6 @@ install:
 - sudo lxd init --auto
 - sudo lxc launch images:rockylinux/8 rocky -c security.privileged=true
 - sudo lxc config device add rocky homedir disk source=$(pwd) path=/tmp/test
+- sudo lxc exec rocky -- echo nameserver 8.8.8.8 | sudo tee -a /etc/resolv.conf
 - sudo lxc exec rocky -- echo hello
 - sudo lxc exec rocky -- bash -x /tmp/test/test.sh

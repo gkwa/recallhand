@@ -12,8 +12,9 @@ on_failure:
 - sleep 60m
 
 install:
+- sudo snap install core
 - sudo apt-get -qq update
 - sudo apt-get -y install lxc debootstrap squashfs-tools awscli >/dev/null
 - sudo snap install distrobuilder --classic >/dev/null
-- lxd init --auto
-- lxc launch images:rockylinux/8 myrocky -c security.privileged=true
+- sudo lxd init --auto
+- sudo lxc launch images:rockylinux/8 myrocky -c security.privileged=true

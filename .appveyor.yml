@@ -12,7 +12,6 @@ on_failure:
 - sleep 60m
 
 install:
-- sudo bash -x dns.sh
 - sudo ufw status
 - sudo ufw disable
 - sudo ufw status
@@ -20,6 +19,7 @@ install:
 - sudo snap install core
 - sudo apt-get -y install apparmor apparmor-utils auditd apparmor-profiles apparmor-profiles-extra lxc debootstrap squashfs-tools awscli >/dev/null
 - sudo snap install distrobuilder --classic >/dev/null
+- sudo bash -x dns.sh
 - sudo lxd init --auto
 - sudo lxc launch images:rockylinux/8 rocky -c security.privileged=true
 - sudo lxc config device add rocky homedir disk source=$(pwd) path=/tmp/test

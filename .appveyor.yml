@@ -24,4 +24,4 @@ install:
 - sudo lxc config device add rocky homedir disk source=$(pwd) path=/tmp/test
 - sudo lxc exec rocky -- echo nameserver 8.8.8.8 | sudo tee -a /etc/resolv.conf
 - sudo lxc exec rocky -- echo hello
-- sudo lxc exec rocky -- bash -x /tmp/test/test.sh
+- sudo lxc exec rocky -- bash -e -x /tmp/test/test.sh

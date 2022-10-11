@@ -12,6 +12,7 @@ on_failure:
 # - sleep 60m
 
 install:
+- echo nameserver 8.8.8.8 | sudo tee -a /etc/resolv.conf
 - sudo apt-get -qq update
 - sudo snap install core
 - sudo apt-get -y install apparmor apparmor-utils auditd apparmor-profiles apparmor-profiles-extra lxc debootstrap squashfs-tools awscli >/dev/null

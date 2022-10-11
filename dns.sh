@@ -12,7 +12,9 @@ apt-get upgrade --yes --quiet
 
 # Upgrade and setup LXD
 
-apt-get install --yes --quiet --target-release=xenial-backports lxd
+# apt-get install --yes --quiet --target-release=xenial-backports lxd
+
+apt-get install --yes --quiet lxd
 
 lxd init --auto
 lxc network create lxdbr0 \

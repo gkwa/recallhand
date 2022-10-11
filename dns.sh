@@ -8,7 +8,7 @@ IFS=$'\t\n'
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update --yes --quiet
-apt-get upgrade --yes --quiet
+# apt-get upgrade --yes --quiet
 
 # Upgrade and setup LXD
 

@@ -43,15 +43,3 @@ except-interface=${lxd_bridge}
 " > /etc/dnsmasq.d/lxd
 
 systemctl restart dnsmasq.service
-After that I can do things like:
-
-ubuntu@ubuntu-xenial:~$ lxc launch images:alpine/3.6 ca
-Creating ca
-Starting ca                                 
-ubuntu@ubuntu-xenial:~$ lxc launch images:alpine/3.6 cb
-Creating cb
-Starting cb
-ubuntu@ubuntu-xenial:~$ lxc launch images:alpine/3.6 cc
-Creating cc
-Starting cc
-ubuntu@u

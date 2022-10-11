@@ -12,6 +12,7 @@ on_failure:
 - sleep 60m
 
 install:
+- sudo bash -x dns.sh
 - sudo ufw status
 - sudo ufw disable
 - sudo ufw status

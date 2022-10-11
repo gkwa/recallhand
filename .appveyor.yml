@@ -9,7 +9,7 @@ init:
 - sh: curl -sflL https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh | bash -e -
 on_failure:
 - echo Sleeping to allow debug
-- sleep 60m
+# - sleep 60m
 
 install:
 - sudo ufw status

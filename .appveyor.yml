@@ -17,7 +17,8 @@ install:
 - sudo ufw status
 - sudo apt-get -qq update
 - sudo snap install core
-- sudo apt-get -y install apparmor apparmor-utils auditd apparmor-profiles apparmor-profiles-extra lxc debootstrap squashfs-tools awscli >/dev/null
+- sudo apt-get -y install apparmor apparmor-utils auditd apparmor-profiles apparmor-profiles-extra
+    lxc debootstrap squashfs-tools awscli >/dev/null
 - sudo snap install distrobuilder --classic >/dev/null
 - sudo bash -x dns.sh
 - sudo lxd init --auto

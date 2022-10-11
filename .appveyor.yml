@@ -18,4 +18,4 @@ install:
 - sudo snap install distrobuilder --classic >/dev/null
 - sudo lxd init --auto
 - sudo lxc launch images:rockylinux/8 rocky
-- sudo lxc exec rocky -- bash -c 'curl -fsSL https://streambox-cdi.s3-us-west-2.amazonaws.com/aws/install.sh | sudo bash -x -s -- -b flame'
+- sudo lxc exec rocky -- curl -fsSL https://streambox-cdi.s3-us-west-2.amazonaws.com/aws/install.sh | sudo bash -x -s -- -b flame

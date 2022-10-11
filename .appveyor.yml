@@ -12,6 +12,7 @@ on_failure:
 # - sleep 60m
 
 install:
+- sudo apt-get -y install apt install apparmor apparmor-utils auditd apparmor-profiles apparmor-profiles-extra
 - sudo snap install core
 - sudo apt-get -qq update
 - sudo apt-get -y install lxc debootstrap squashfs-tools awscli >/dev/null

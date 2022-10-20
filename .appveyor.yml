@@ -9,7 +9,7 @@ init:
 - sh: curl -sflL https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh | bash -e -
 on_failure:
 - echo Sleeping to allow debug
-# - sleep 60m
+- sleep 60m
 
 install:
 - sudo ufw status
@@ -21,7 +21,7 @@ install:
     apparmor-profiles apparmor-profiles-extra
     lxc debootstrap squashfs-tools awscli >/dev/null
 - sudo snap install distrobuilder --classic >/dev/null
-# - sudo bash -x dns.sh
+- sudo bash -x dns.sh
 - sudo lxd init --auto
 - sudo lxc launch ubuntu:22.04 --vm
 - sudo lxc launch images:rockylinux/8 rocky -c security.privileged=true

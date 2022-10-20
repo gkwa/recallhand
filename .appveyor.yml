@@ -12,9 +12,6 @@ on_failure:
 - sleep 60m
 
 install:
-- sudo ufw status
-- sudo ufw disable
-- sudo ufw status
 - sudo apt-get -qq update
 - sudo snap install core
 - sudo apt-get -y install apparmor apparmor-utils auditd

@@ -21,8 +21,9 @@ install:
     apparmor-profiles apparmor-profiles-extra
     lxc debootstrap squashfs-tools awscli >/dev/null
 - sudo snap install distrobuilder --classic >/dev/null
-- sudo bash -x dns.sh
+# - sudo bash -x dns.sh
 - sudo lxd init --auto
+
 - sudo lxc launch ubuntu:22.04 myubuntu
 - sudo lxc exec myubuntu -- bash -c 'ping -c 10 google.com'
 

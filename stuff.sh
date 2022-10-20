@@ -2,7 +2,7 @@
 
 apt -qq update
 apt -qy install iputils-ping
-ping -c 10 google.com
+ping -c 1 google.com
 apt -qy install apache2
 
 systemctl status apache2

@@ -13,4 +13,4 @@ on_failure:
 
 install:
 - ./container.sh
-- docker exec -ti bash -x /tmp/src/stuff.sh
+- docker exec -ti myubuntu bash -x /tmp/src/stuff.sh

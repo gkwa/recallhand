@@ -25,3 +25,7 @@ install:
 - sudo lxd init --auto
 - sudo lxc launch ubuntu:22.04 myubuntu
 - sudo lxc exec myubuntu -- bash -c 'ping -c 10 google.com'
+
+- sudo lxc launch images:rockylinux/8 rocky -c security.privileged=true
+- sudo lxc config device add rocky homedir disk source=$(pwd) path=/tmp/test
+- sudo lxc exec rocky -- bash -xe /tmp/test/test.sh

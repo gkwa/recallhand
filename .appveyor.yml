@@ -12,4 +12,5 @@ on_failure:
 #- sleep 60m
 
 install:
-- ./test2.sh
+- ./container.sh
+- docker exec -ti bash -x /tmp/src/stuff.sh

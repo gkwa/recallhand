@@ -5,7 +5,7 @@ cd docker-ubuntu-systemd
 
 docker build -t taylorm/ubuntu .
 
-docker run --name myubuntu --rm --tty --privileged --volume /sys/fs/cgroup:/sys/fs/cgroup:ro taylorm/ubuntu -d
+docker run --detach --name myubuntu --rm --tty --privileged --volume /sys/fs/cgroup:/sys/fs/cgroup:ro taylorm/ubuntu
 sleep 5
 
 docker exec myubuntu -- bash -c 'apt -qq install'
